@@ -1,10 +1,87 @@
-/* reset */
-
+/* 1. RESET & BASE STYLES */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family:
-    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
+    "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* A cleaner font stack */
+}
+
+body {
+  background-color: #f0f2f5; /* Light grey background makes the white form pop */
+  min-height: 100vh; /* Ensures vertical centering works on full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. THE CARD CONTAINER */
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 400px; /* Prevents it from getting too wide on desktop */
+  padding: 2.5rem; /* Generous padding inside the card */
+  border-radius: 12px; /* Smooth corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow instead of border */
+}
+
+/* 3. TYPOGRAPHY */
+header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem; /* Pushes the form down */
+  text-align: center; /* Centers the title */
+  border: none; /* Removed the old border */
+}
+
+/* 4. FORM LAYOUT */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Adds consistent space between every input group */
+}
+
+/* 5. LABELS & INPUTS */
+/* Making the label block-level puts it ABOVE the input */
+.input-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.input-field input {
+  width: 100%; /* Forces input to fill the container width */
+  padding: 0.8rem; /* Makes the input taller and easier to click */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease; /* Smooth animation on click */
+}
+
+/* The "Active" state - vital for good UX */
+.input-field input:focus {
+  outline: none;
+  border-color: #4a90e2; /* Blue border when typing */
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1); /* Subtle blue glow */
+}
+
+/* 6. THE BUTTON */
+button {
+  background-color: #4a90e2; /* Nice modern blue */
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #357abd; /* Darker blue on hover */
 }
