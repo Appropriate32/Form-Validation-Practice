@@ -50,8 +50,14 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     form.reportValidity();
   } else {
+    if (document.querySelector(".success-message")) {
+      return;
+    }
     const highFive = document.createElement("h1");
+    highFive.classList.add("success-message");
     highFive.textContent = "High Five!";
+    form.reset();
+
     docBody.appendChild(highFive);
   }
 });

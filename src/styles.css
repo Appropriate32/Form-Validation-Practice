@@ -106,7 +106,7 @@ button:hover {
   border-color: #00ff2f;
 }
 
-h1 {
+.success-message {
   color: #00ff2fb3;
   background-color: rgb(0, 0, 0);
   padding: 10px;
