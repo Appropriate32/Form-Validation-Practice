@@ -35,6 +35,7 @@ const postalInput = document.querySelector("#postal");
 const passwordInput = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-password");
 const form = document.querySelector("form");
+const docBody = document.querySelector("body");
 
 emailInput.addEventListener("input", () => validateForm(emailInput));
 countryInput.addEventListener("input", () => validateForm(countryInput));
@@ -44,4 +45,13 @@ passwordInput.addEventListener("input", () => {
   validateForm(confirmPassword);
 });
 confirmPassword.addEventListener("input", () => validateForm(confirmPassword));
-form.addEventListener("submit", () => form.reportValidity());
+form.addEventListener("submit", (event) => {
+  if (!form.checkValidity()) {
+    event.preventDefault();
+    form.reportValidity();
+  } else {
+    const highFive = document.createElement("h1");
+    highFive.textContent = "High Five!";
+    docBody.appendChild(highFive);
+  }
+});

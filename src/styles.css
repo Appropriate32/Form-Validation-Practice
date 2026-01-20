@@ -11,6 +11,7 @@ body {
   background-color: #f0f2f5; /* Light grey background makes the white form pop */
   min-height: 100vh; /* Ensures vertical centering works on full screen */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -103,4 +104,12 @@ button:hover {
 
 .dirty:valid {
   border-color: #00ff2f;
+}
+
+h1 {
+  color: #00ff2fb3;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5%;
 }
