@@ -86,14 +86,17 @@ button:hover {
   background-color: #357abd; /* Darker blue on hover */
 }
 
-.input-field input:invalid {
+.input-field input.dirty:invalid:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
   outline: none;
-  border-color: #ff0000; /* Blue border when typing */
-  /* box-shadow: 0 0 0 3px rgba(226, 74, 74, 0.609); */
 }
 
-.input-field input:valid {
-  outline: none;
-  border-color: #00ff2f; /* Blue border when typing */
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+.dirty:invalid {
+  border-color: #ff0000;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+.dirty:valid {
+  border-color: #00ff2f;
 }

@@ -7,11 +7,12 @@ import "./styles.css";
  */
 
 function validateForm(Input) {
+  Input.classList.add("dirty");
+
   if (Input.validity.valueMissing) {
     Input.setCustomValidity("Input cannot be empty");
     Input.reportValidity();
-  }
-  if (Input.value.length < Input.minLength) {
+  } else if (Input.value.length < Input.minLength) {
     Input.setCustomValidity(
       `Length too short it should be atleast ${Input.minLength} characters!`,
     );
