@@ -86,7 +86,7 @@ button:hover {
   background-color: #357abd; /* Darker blue on hover */
 }
 
-.input-field input.dirty:invalid:focus {
+.dirty:invalid:focus {
   border-color: #ff0000;
   box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
   outline: none;
@@ -95,6 +95,10 @@ button:hover {
 .dirty:invalid {
   border-color: #ff0000;
   box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+.dirty:valid:focus {
+  border-color: #00ff2f;
 }
 
 .dirty:valid {
